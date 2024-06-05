@@ -6,11 +6,11 @@ export function FireflySidebar() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const sidebarWrapperCls = useMemo(() => {
-    return `${isOpen ? 'w-[300px]' : 'w-[50px]'} bg-primary-gray-900 h-screen`;
+    return `${isOpen ? 'w-[300px]' : 'w-[50px]'} bg-primary-gray-950 h-screen`;
   }, [isOpen]);
 
   const sidebarMenuCls = useMemo(() => {
-    return `${isOpen ? 'border-primary-gray-500' : 'border-transparent'} w-full flex items-center justify-center px-[10px] py-[10px] border-b`;
+    return `${isOpen ? 'border-primary-gray-700' : 'border-transparent'} w-full flex items-center justify-center px-[10px] py-[10px] border-b`;
   }, [isOpen]);
 
   const toggleSidebarFn = useCallback(() => {

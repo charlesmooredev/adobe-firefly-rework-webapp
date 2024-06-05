@@ -16,12 +16,12 @@ export function FireflySettingsModel() {
       <Picker
         value={value}
         size="m"
-        className="bg-primary-gray-950 w-full rounded-[6px] p-[5px] text-white"
+        className="bg-primary-gray-900 w-full rounded-[6px] p-[5px] text-white"
         onChange={e => setValue(e.currentTarget.value)}
       >
-        <MenuGroup className="bg-primary-gray-950 rounded-[6px] p-[5px]">
+        <MenuGroup className="bg-primary-gray-900 rounded-[6px] p-[5px]">
           {fireflyModels.map(model => (
-            <MenuItem value={model.value} key={model.value} className="text-primary-gray-300 hover:text-white">
+            <MenuItem value={model.value} key={model.value} className="text-primary-gray-200 hover:text-white">
               {model.name}
             </MenuItem>
           ))}

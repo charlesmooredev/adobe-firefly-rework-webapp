@@ -4,7 +4,7 @@ import { FireflySidebarCard } from '../FireflySidebarCard';
 
 export function FireflyGeneralSettings() {
   return (
-    <FireflySidebarCard divider={true}>
+    <FireflySidebarCard title="General Settings" divider={true}>
       <div className="space-y-[10px]">
         <FireflySettingsModel />
         <FireflySettingsAspectRatio />
