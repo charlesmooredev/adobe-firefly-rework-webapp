@@ -14,8 +14,9 @@ export function FireflySettingsAspectRatio() {
   const [value, setValue] = useState(aspectRatios[0].value);
   return (
     <div>
-      <FieldLabel>Aspect ratio</FieldLabel>
+      <FieldLabel for="ratio-picker">Aspect ratio</FieldLabel>
       <Picker
+        id="ratio-picker"
         value={value}
         size="m"
         className="bg-primary-gray-900 w-full rounded-[6px] p-[5px] text-white"

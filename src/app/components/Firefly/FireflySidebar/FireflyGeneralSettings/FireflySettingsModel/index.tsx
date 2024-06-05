@@ -12,8 +12,9 @@ export function FireflySettingsModel() {
   const [value, setValue] = useState(fireflyModels[0].value);
   return (
     <div>
-      <FieldLabel>Model</FieldLabel>
+      <FieldLabel for="model-picker">Model</FieldLabel>
       <Picker
+        id="model-picker"
         value={value}
         size="m"
         className="bg-primary-gray-900 w-full rounded-[6px] p-[5px] text-white"
