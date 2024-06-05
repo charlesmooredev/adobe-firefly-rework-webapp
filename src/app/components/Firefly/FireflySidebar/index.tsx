@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { MdClose, MdMenu } from 'react-icons/md';
+import { FireflyGeneralSettings } from './FireflyGeneralSettings';
 
 export function FireflySidebar() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -34,7 +35,11 @@ export function FireflySidebar() {
           </button>
         )}
       </div>
-      {isOpen && <div className="max-h-[calc(100%-120px)] overflow-y-scroll p-[10px]"></div>}
+      {isOpen && (
+        <div className="max-h-[calc(100%-120px)] overflow-y-scroll">
+          <FireflyGeneralSettings />
+        </div>
+      )}
     </div>
   );
 }
