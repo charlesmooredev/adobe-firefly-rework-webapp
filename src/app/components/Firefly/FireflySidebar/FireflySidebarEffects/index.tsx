@@ -1,7 +1,7 @@
 import { FireflySidebarCard } from '../FireflySidebarCard';
 import { FireflySidebarEffectCard } from './FireflySidebarEffectCard';
 import { fireflyEffects } from '../../../../helpers/Effects.ts';
-import { useCallback, useMemo, useState } from 'react';
+import { ChangeEvent, useCallback, useMemo, useState } from 'react';
 
 export function FireflySidebarEffects() {
   const [search, setSearch] = useState('');
@@ -14,8 +14,7 @@ export function FireflySidebarEffects() {
     return fireflyEffects.filter(effect => effect.name.toLowerCase().includes(search.toLowerCase()));
   }, [search]);
 
-  const searchFn = useCallback(e => {
-    console.log(e.target.value);
+  const searchFn = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   }, []);
 
@@ -23,7 +22,7 @@ export function FireflySidebarEffects() {
     <FireflySidebarCard title="Effects" divider={true}>
       <input
         type="text"
-        onChange={searchFn}
+        onChange={e => searchFn(e)}
         className="border-primary-gray-500/50 focus:border-primary-gray-500 w-full rounded-full border bg-black p-[10px] outline-0"
         placeholder="Search effects"
       />
